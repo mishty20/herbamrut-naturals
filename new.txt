@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbamrut Naturals - Doctor-Designed Ayurvedic Wellness Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="logo.jpeg" alt="Herbamrut Naturals" class="loading-logo">
+            <p class="loading-text">
+                Herbamrut Naturals is doctor-designed solutions for preventive wellness, 
+                managing modern lifestyle diseases, and longevity.
+            </p>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="header" style="display: none;">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo-link" onclick="navigateTo('home')">
+                    <img src="logo.jpeg" alt="Herbamrut Naturals Logo" class="logo">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <a href="#home" onclick="navigateTo('home')" data-page="home">Home</a>
+                    <a href="#about" onclick="navigateTo('about')" data-page="about">About Us</a>
+                    <a href="#doctors" onclick="navigateTo('doctors')" data-page="doctors">Our Doctors</a>
+                    <a href="#success-stories" onclick="navigateTo('success-stories')" data-page="success-stories">Success Stories</a>
+                    <a href="#testimonials" onclick="navigateTo('testimonials')" data-page="testimonials">Testimonials</a>
+                    <a href="#video-testimonials" onclick="navigateTo('video-testimonials')" data-page="video-testimonials">Video Testimonials</a>
+                    <a href="#health-tips" onclick="navigateTo('health-tips')" data-page="health-tips">Free Health Tips</a>
+                    <a href="#consultation" onclick="navigateTo('consultation')" data-page="consultation">Consultation</a>
+                    <a href="#contact" onclick="navigateTo('contact')" data-page="contact">Contact Us</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="menu-icon">☰</span>
+                    <span class="close-icon">✕</span>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileNav" class="mobile-nav">
+                <a href="#home" onclick="navigateTo('home')" data-page="home">Home</a>
+                <a href="#about" onclick="navigateTo('about')" data-page="about">About Us</a>
+                <a href="#doctors" onclick="navigateTo('doctors')" data-page="doctors">Our Doctors</a>
+                <a href="#success-stories" onclick="navigateTo('success-stories')" data-page="success-stories">Success Stories</a>
+                <a href="#testimonials" onclick="navigateTo('testimonials')" data-page="testimonials">Testimonials</a>
+                <a href="#video-testimonials" onclick="navigateTo('video-testimonials')" data-page="video-testimonials">Video Testimonials</a>
+                <a href="#health-tips" onclick="navigateTo('health-tips')" data-page="health-tips">Free Health Tips</a>
+                <a href="#consultation" onclick="navigateTo('consultation')" data-page="consultation">Consultation</a>
+                <a href="#contact" onclick="navigateTo('contact')" data-page="contact">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent" style="display: none;">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <!-- Hero Carousel -->
+            <section class="hero-section">
+                <div class="carousel">
+                    <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1705083649602-03c5fbae2e89?w=1080');">
+                        <div class="carousel-overlay"></div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1659353887222-630895f23cc5?w=1080');">
+                        <div class="carousel-overlay"></div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1631037958828-cc7d9a7fd93b?w=1080');">
+                        <div class="carousel-overlay"></div>
+                    </div>
+                </div>
+
+                <div class="hero-content">
+                    <div class="container">
+                        <div class="hero-text">
+                            <h1>Herbamrut Naturals</h1>
+                            <p>Doctor-designed Ayurvedic solutions for preventive wellness & longevity</p>
+                            <div class="hero-buttons">
+                                <button onclick="navigateTo('consultation')" class="btn btn-primary">Book Consultation</button>
+                                <a href="https://wa.me/919876543210" target="_blank" class="btn btn-secondary">Order on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+                
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                </div>
+            </section>
+
+            <!-- Immunity Section -->
+            <section class="immunity-section">
+                <div class="container">
+                    <h2>Boost Immunity, Balance Life, Live Longer</h2>
+                    <p>Experience holistic wellness through doctor-designed Ayurvedic solutions that support your immunity, vitality, and overall well-being.</p>
+                </div>
+            </section>
+
+            <!-- Quick Access Cards -->
+            <section class="quick-access">
+                <div class="container">
+                    <div class="cards-grid">
+                        <div class="card" onclick="navigateTo('consultation')">
+                            <div class="card-icon green">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                </svg>
+                            </div>
+                            <h3>Ayurvedic Consultation</h3>
+                            <p>Book your personalized consultation with our expert doctors</p>
+                        </div>
+
+                        <div class="card" onclick="navigateTo('consultation')">
+                            <div class="card-icon blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </div>
+                            <h3>Homeopathic Consultation</h3>
+                            <p>Gentle and effective homeopathic treatments</p>
+                        </div>
+
+                        <div class="card" onclick="navigateTo('health-tips')">
+                            <div class="card-icon amber">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                </svg>
+                            </div>
+                            <h3>Free Health Tips</h3>
+                            <p>Daily wellness tips from our expert doctors</p>
+                        </div>
+
+                        <div class="card" onclick="navigateTo('video-testimonials')">
+                            <div class="card-icon purple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                                </svg>
+                            </div>
+                            <h3>Video Testimonials</h3>
+                            <p>Real stories from our satisfied patients</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>About Herbamrut Naturals</h1>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="content-card">
+                    <p class="lead"><strong>Herbamrut Naturals</strong> is a doctor-designed herbal wellness and natural nutrition brand, created to manage and support modern lifestyle-related health challenges through science-guided, nature-based solutions.</p>
+                    
+                    <p>Inspired by the <strong>5,000-year legacy of Ayurveda</strong> and guided by modern scientific understanding, Herbamrut Naturals is led by a team of experienced and leading Ayurvedic doctors.</p>
+
+                    <p>Our formulations support <strong>immunity, vitality, metabolic balance, heart health, stress management</strong>, and overall lifestyle wellness, helping people of all age groups maintain balance, resilience, and long-term well-being.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-box green">
+                        <div class="feature-icon">🌿</div>
+                        <h3>Natural Solutions</h3>
+                        <p>Science-guided herbal formulations</p>
+                    </div>
+                    <div class="feature-box blue">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Doctor-Designed</h3>
+                        <p>Led by expert Ayurvedic doctors</p>
+                    </div>
+                    <div class="feature-box purple">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Holistic Wellness</h3>
+                        <p>Complete body, mind, spirit care</p>
+                    </div>
+                    <div class="feature-box amber">
+                        <div class="feature-icon">👥</div>
+                        <h3>For All Ages</h3>
+                        <p>Wellness for every age group</p>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <button onclick="navigateTo('doctors')" class="btn btn-primary">Meet Our Doctors</button>
+                    <button onclick="navigateTo('consultation')" class="btn btn-secondary">Book Consultation</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doctors Page -->
+        <div id="doctors" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>Our Team of Doctors</h1>
+                    <p class="subtitle">Led by experienced and leading Ayurvedic doctors dedicated to your wellness</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="doctors-grid">
+                    <div class="doctor-card">
+                        <div class="doctor-image">
+                            <div class="doctor-placeholder">👨‍⚕️</div>
+                            <div class="doctor-badge">23+ Yrs</div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Manish Jadhav</h3>
+                            <p class="doctor-degree">🎓 BHMS</p>
+                            <p class="doctor-experience">23 Years Experience</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card">
+                        <div class="doctor-image">
+                            <div class="doctor-placeholder">👨‍⚕️</div>
+                            <div class="doctor-badge">20+ Yrs</div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Shailesh Dhanawde</h3>
+                            <p class="doctor-degree">🎓 BAMS, MD Ayurveda</p>
+                            <p class="doctor-specialty">Panchkarma Specialist</p>
+                            <p class="doctor-experience">20 Years Experience</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card">
+                        <div class="doctor-image">
+                            <div class="doctor-placeholder">👨‍⚕️</div>
+                            <div class="doctor-badge">23+ Yrs</div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Sachin Patil</h3>
+                            <p class="doctor-degree">🎓 BAMS</p>
+                            <p class="doctor-experience">23 Years Experience</p>
+                        </div>
+                    </div>
+
+                    <div class="doctor-card">
+                        <div class="doctor-image">
+                            <div class="doctor-placeholder">👨‍⚕️</div>
+                            <div class="doctor-badge">23+ Yrs</div>
+                        </div>
+                        <div class="doctor-info">
+                            <h3>Dr. Pankaj Patil</h3>
+                            <p class="doctor-degree">🎓 BAMS</p>
+                            <p class="doctor-experience">23 Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h2>Ready to Start Your Wellness Journey?</h2>
+                    <p>Consult with our expert doctors for personalized Ayurvedic and Homeopathic treatments</p>
+                    <button onclick="navigateTo('consultation')" class="btn btn-primary">Book Consultation Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Stories Page -->
+        <div id="success-stories" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>📈 Success Stories</h1>
+                    <p class="subtitle">Real transformations from our patients</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-header">
+                            <div>
+                                <h3>Rajesh Kumar</h3>
+                                <p>Age: 45</p>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="story-condition">
+                            <p class="label">Condition:</p>
+                            <p class="value">Diabetes Management</p>
+                        </div>
+                        <div class="story-result">
+                            <p class="label">Result:</p>
+                            <p class="value">Blood sugar levels normalized within 3 months</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-header">
+                            <div>
+                                <h3>Priya Sharma</h3>
+                                <p>Age: 38</p>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="story-condition">
+                            <p class="label">Condition:</p>
+                            <p class="value">Stress & Anxiety</p>
+                        </div>
+                        <div class="story-result">
+                            <p class="label">Result:</p>
+                            <p class="value">Significant improvement in mental well-being</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-header">
+                            <div>
+                                <h3>Amit Patel</h3>
+                                <p>Age: 52</p>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="story-condition">
+                            <p class="label">Condition:</p>
+                            <p class="value">High Cholesterol</p>
+                        </div>
+                        <div class="story-result">
+                            <p class="label">Result:</p>
+                            <p class="value">Cholesterol reduced naturally without side effects</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-header">
+                            <div>
+                                <h3>Meena Desai</h3>
+                                <p>Age: 42</p>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="story-condition">
+                            <p class="label">Condition:</p>
+                            <p class="value">Joint Pain</p>
+                        </div>
+                        <div class="story-result">
+                            <p class="label">Result:</p>
+                            <p class="value">Pain-free movement achieved in 2 months</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-header">
+                            <div>
+                                <h3>Suresh Reddy</h3>
+                                <p>Age: 48</p>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="story-condition">
+                            <p class="label">Condition:</p>
+                            <p class="value">Immunity Boost</p>
+                        </div>
+                        <div class="story-result">
+                            <p class="label">Result:</p>
+                            <p class="value">No seasonal illnesses for over a year</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-header">
+                            <div>
+                                <h3>Kavita Singh</h3>
+                                <p>Age: 35</p>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="story-condition">
+                            <p class="label">Condition:</p>
+                            <p class="value">Digestive Issues</p>
+                        </div>
+                        <div class="story-result">
+                            <p class="label">Result:</p>
+                            <p class="value">Complete relief from chronic acidity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Page -->
+        <div id="testimonials" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>💬 Testimonials</h1>
+                    <p class="subtitle">What our patients say about us</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Herbamrut Naturals has transformed my health. The doctors are knowledgeable and caring. My chronic fatigue is now completely gone."</p>
+                        <div class="testimonial-author">
+                            <p class="name">Rahul Mehta</p>
+                            <p class="location">Mumbai</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Amazing Ayurvedic treatments! I have been consulting for my digestive issues and saw improvement within weeks. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <p class="name">Anjali Verma</p>
+                            <p class="location">Pune</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"The personalized care and natural approach to wellness is exceptional. My blood pressure is now under control naturally."</p>
+                        <div class="testimonial-author">
+                            <p class="name">Vikram Shah</p>
+                            <p class="location">Ahmedabad</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Professional, caring, and effective. The team truly understands Ayurveda and modern wellness needs."</p>
+                        <div class="testimonial-author">
+                            <p class="name">Deepa Nair</p>
+                            <p class="location">Bangalore</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Best decision I made for my health. The doctor-designed solutions are safe and effective. No more dependency on allopathic medicines."</p>
+                        <div class="testimonial-author">
+                            <p class="name">Sandeep Gupta</p>
+                            <p class="location">Delhi</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Grateful for the holistic approach. My anxiety and stress levels have improved significantly with their guidance."</p>
+                        <div class="testimonial-author">
+                            <p class="name">Pooja Joshi</p>
+                            <p class="location">Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Testimonials Page -->
+        <div id="video-testimonials" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>🎥 Video Testimonials</h1>
+                    <p class="subtitle">Watch real patient experiences and transformations</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail green-gradient">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Ramesh Kumar</h3>
+                            <p>Diabetes Recovery Journey</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail blue-gradient">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Shalini Desai</h3>
+                            <p>Stress Management Success</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail purple-gradient">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Arun Patel</h3>
+                            <p>Heart Health Improvement</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail pink-gradient">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Neha Singh</h3>
+                            <p>Weight Loss & Wellness</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail amber-gradient">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Mahesh Reddy</h3>
+                            <p>Joint Pain Relief</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail rose-gradient">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Divya Sharma</h3>
+                            <p>Skin Health Transformation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="youtube-cta">
+                    <h2>Watch More Health Videos</h2>
+                    <p>Subscribe to our YouTube channel for daily health tips, wellness advice, and patient success stories</p>
+                    <a href="https://youtube.com/@herbamrutnaturals" target="_blank" class="btn btn-primary">Visit Our YouTube Channel</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Health Tips Page -->
+        <div id="health-tips" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>💡 Free Daily Health Tips</h1>
+                    <p class="subtitle">Expert wellness advice from our doctors - updated regularly</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="tips-list">
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div>
+                                <h2>Morning Wellness Routine</h2>
+                                <p class="tip-date">📅 January 11, 2026</p>
+                            </div>
+                            <span class="tip-badge">Doctor's Tip</span>
+                        </div>
+                        <p class="tip-content">Start your day with warm water and honey. This simple practice helps detoxify your body and boosts metabolism naturally.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div>
+                                <h2>Stress Management</h2>
+                                <p class="tip-date">📅 January 10, 2026</p>
+                            </div>
+                            <span class="tip-badge">Doctor's Tip</span>
+                        </div>
+                        <p class="tip-content">Practice deep breathing for 10 minutes daily. Pranayama helps reduce anxiety and improves mental clarity.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div>
+                                <h2>Digestive Health</h2>
+                                <p class="tip-date">📅 January 9, 2026</p>
+                            </div>
+                            <span class="tip-badge">Doctor's Tip</span>
+                        </div>
+                        <p class="tip-content">Include ginger and turmeric in your diet. These herbs support healthy digestion and reduce inflammation.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div>
+                                <h2>Immunity Boost</h2>
+                                <p class="tip-date">📅 January 8, 2026</p>
+                            </div>
+                            <span class="tip-badge">Doctor's Tip</span>
+                        </div>
+                        <p class="tip-content">Consume Tulsi tea daily. Holy basil is a powerful adaptogen that strengthens your immune system.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div>
+                                <h2>Sleep Better</h2>
+                                <p class="tip-date">📅 January 7, 2026</p>
+                            </div>
+                            <span class="tip-badge">Doctor's Tip</span>
+                        </div>
+                        <p class="tip-content">Drink warm milk with a pinch of nutmeg before bed. This Ayurvedic remedy promotes restful sleep.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div>
+                                <h2>Joint Health</h2>
+                                <p class="tip-date">📅 January 6, 2026</p>
+                            </div>
+                            <span class="tip-badge">Doctor's Tip</span>
+                        </div>
+                        <p class="tip-content">Regular practice of gentle yoga and walking helps maintain joint flexibility and reduces pain.</p>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h2>Want Personalized Health Advice?</h2>
+                    <p>Book a consultation with our expert doctors for customized wellness solutions</p>
+                    <button onclick="navigateTo('consultation')" class="btn btn-primary">Book Consultation</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consultation Page -->
+        <div id="consultation" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>Online Consultation</h1>
+                    <p class="subtitle">Book your personalized consultation with our expert doctors</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="consultation-grid">
+                    <div class="consultation-card ayurvedic">
+                        <div class="consultation-header">
+                            <div class="consultation-icon">🩺</div>
+                            <h2>Ayurvedic Consultation</h2>
+                            <p>Traditional Ayurvedic diagnosis and personalized treatment plans</p>
+                        </div>
+                        <div class="consultation-body">
+                            <div class="consultation-features">
+                                <div class="feature-item">✓ Complete health assessment based on Ayurvedic principles</div>
+                                <div class="feature-item">✓ Personalized herbal formulations and lifestyle guidance</div>
+                                <div class="feature-item">✓ Doctor-led consultation with 20+ years experience</div>
+                                <div class="feature-item">✓ Follow-up support and monitoring</div>
+                            </div>
+                            <div class="consultation-details">
+                                <p>⏱️ Duration: 30-45 minutes</p>
+                                <p>📅 Availability: 7 days a week</p>
+                            </div>
+                            <button class="btn btn-primary full-width">Book Ayurvedic Consultation</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card homeopathic">
+                        <div class="consultation-header">
+                            <div class="consultation-icon">❤️</div>
+                            <h2>Homeopathic Consultation</h2>
+                            <p>Gentle, holistic homeopathic treatments for all age groups</p>
+                        </div>
+                        <div class="consultation-body">
+                            <div class="consultation-features">
+                                <div class="feature-item">✓ Detailed case analysis and constitutional diagnosis</div>
+                                <div class="feature-item">✓ Safe, natural remedies with no side effects</div>
+                                <div class="feature-item">✓ Expert BHMS doctor with 23+ years experience</div>
+                                <div class="feature-item">✓ Suitable for infants, children, and adults</div>
+                            </div>
+                            <div class="consultation-details">
+                                <p>⏱️ Duration: 30-45 minutes</p>
+                                <p>📅 Availability: 7 days a week</p>
+                            </div>
+                            <button class="btn btn-primary full-width">Book Homeopathic Consultation</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whatsapp-cta">
+                    <h2>💬 Quick Booking via WhatsApp</h2>
+                    <p>For immediate consultation booking or any queries, contact us directly on WhatsApp</p>
+                    <a href="https://wa.me/919876543210" target="_blank" class="btn btn-primary">Book Now on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <div class="page-container">
+                <div class="page-header">
+                    <h1>Get In Touch</h1>
+                    <p class="subtitle">We're here to help you on your wellness journey</p>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <h2>Contact Information</h2>
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="info-icon">📍</div>
+                                    <div>
+                                        <h3>Address</h3>
+                                        <p>Herbamrut Naturals Clinic<br>Mumbai, Maharashtra<br>India</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">📞</div>
+                                    <div>
+                                        <h3>Phone</h3>
+                                        <a href="tel:+919876543210">+91 98765 43210</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">✉️</div>
+                                    <div>
+                                        <h3>Email</h3>
+                                        <a href="mailto:info@herbamrutnaturals.com">info@herbamrutnaturals.com</a>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">⏰</div>
+                                    <div>
+                                        <h3>Hours</h3>
+                                        <p>Monday - Sunday<br>9:00 AM - 8:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-card">
+                            <h2>Connect With Us</h2>
+                            <a href="https://wa.me/919876543210" target="_blank" class="social-link whatsapp">
+                                <div class="social-icon">💬</div>
+                                <div>
+                                    <h3>WhatsApp Us</h3>
+                                    <p>Quick consultation & orders</p>
+                                </div>
+                            </a>
+                            <a href="https://youtube.com/@herbamrutnaturals" target="_blank" class="social-link youtube">
+                                <div class="social-icon">📺</div>
+                                <div>
+                                    <h3>YouTube Channel</h3>
+                                    <p>Watch our health videos</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <div class="quick-actions">
+                            <h2>Quick Actions</h2>
+                            <a href="https://wa.me/919876543210" target="_blank" class="btn btn-primary full-width mb-3">Order on WhatsApp</a>
+                            <a href="tel:+919876543210" class="btn btn-primary full-width mb-3">Call Now</a>
+                            <button onclick="navigateTo('consultation')" class="btn btn-secondary full-width">Book Consultation</button>
+                        </div>
+
+                        <div class="why-choose">
+                            <h2>Why Choose Us?</h2>
+                            <div class="checklist">
+                                <div class="checklist-item">✓ Doctor-designed natural solutions</div>
+                                <div class="checklist-item">✓ 20+ years of combined medical experience</div>
+                                <div class="checklist-item">✓ Personalized wellness plans</div>
+                                <div class="checklist-item">✓ Safe, non-synthetic formulations</div>
+                                <div class="checklist-item">✓ Holistic approach to health</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float" id="whatsappFloat" style="display: none;">
+        <span class="whatsapp-tooltip">Order on WhatsApp</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="logo.jpeg" alt="Herbamrut Naturals" class="footer-logo">
+                    <p>Doctor-designed wellness solutions</p>
+                </div>
+
+                <div class="footer-section">
+                    <p>📞 +91 98765 43210</p>
+                    <p>Mumbai, Maharashtra, India</p>
+                </div>
+
+                <div class="footer-section">
+                    <a href="https://youtube.com/@herbamrutnaturals" target="_blank">📺 Watch our Health Videos</a>
+                    <a href="https://wa.me/919876543210" target="_blank">💬 WhatsApp Us</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Herbamrut Naturals - All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
